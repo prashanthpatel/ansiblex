@@ -7,16 +7,21 @@
      name: apache2
      state: present
     when: ansible_os_family== "Debian" 
+
   - name: service restart ubuntu
     service:
      name: apache2
      state: started
     when: ansible_os_family== "Debian"
+
   - name: install httpd(web server) on redhat
     yum:
      name: httpd
      state: present
+    when: ansible_os_family== "RedHat"
+
   - name: service restart redhat
     service:
      name: httpd
      state: started
+    when: ansible_os_family== "RedHat"
