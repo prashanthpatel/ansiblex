@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: redhathosts
   become: yes
   tasks:
   - name: install apache2(webserver) on ubuntu node
