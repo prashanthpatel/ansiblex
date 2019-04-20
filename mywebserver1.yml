@@ -1,0 +1,27 @@
+---
+- hosts: ungroup
+  become: yes
+  tasks:
+  - name: install webserver(apache2) on ubuntu14
+    apt:
+     name: apache2
+     state: present
+    when: ansible_os_family== "Debian"
+
+  - name: start the service
+    service:
+     name: apache2
+     state: started
+    when: ansible_os_family== "Debian"
+
+  - name: install webserver() on redhat7
+    yum:
+     name: httpd 
+     state: present
+    when: ansible_os_family== "RedHat"
+
+  - name: start the service
+    service:
+     name: httpd
+     state: started
+    when: ansible_os_family== "RedHat"
