@@ -1,3 +1,6 @@
+
+[ungroup]
+
 [ubuntuhosts]
 172.31.25.59
 [ubuntuhosts:vars]
