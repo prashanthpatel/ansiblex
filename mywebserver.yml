@@ -2,11 +2,19 @@
 - hosts: all
   become: yes
   tasks:
-  - name: install apache2 on node
+  - name: install apache2(webserver) on ubuntu node
     apt:
      name: apache2
      state: present
-  - name: service restart
+  - name: service restart ubuntu
     service:
      name: apache2
-     state: restarted
+     state: started
+  - name: install httpd(web server) on redhat
+    yum:
+     name: httpd
+     state: present
+  - name: service restart redhat
+    service:
+     name: httpd
+     state: started
