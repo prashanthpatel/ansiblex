@@ -8,4 +8,4 @@ ansible_python_interpreter=/usr/bin/python3
 
 [redhathosts]
 172.31.39.67
-
+172.31.41.178
