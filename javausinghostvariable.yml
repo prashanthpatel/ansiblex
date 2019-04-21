@@ -4,12 +4,12 @@
   tasks:
   - name: install java8 on ubuntu
     apt: 
-     name: openjdk-8-jdk
+     name: javaonubuntu
      state: present
     when: ansible_os_family== "Debian"
 
   - name: install java on rehat
     yum:
-     name: java-1.6.0-openjdk
+     name: javaonredhat
      state: present
     when: ansible_os_family== "Redhat"
