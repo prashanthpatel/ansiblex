@@ -1,0 +1,15 @@
+--- 
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: install java8 on ubuntu
+    apt: 
+     name: openjdk-8-jdk
+     state: present
+    when: ansible_os_family== "Debian"
+
+  - name: install java on rehat
+    yum:
+     name: java-1.6.0-openjdk
+     state: present
+    when: ansible_os_family== "Redhat"
