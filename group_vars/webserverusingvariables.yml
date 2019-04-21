@@ -1,0 +1,23 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: webserver install on ubuntu
+    apt:
+     name: "{{webserveronubuntu}}"
+     state: present
+
+  - name: webserver start on ubuntu
+    service:
+     name: "{{webserveronubuntu}}"
+     state: started
+
+  - name: webserver install on redhat
+    yum:
+     name: "{{webserveronredhat}}"
+     state: present
+    
+  - name: webserver start on redhat
+    service:
+     name: "{{webserveronredhat}}"
+     state: started
