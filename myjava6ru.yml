@@ -4,7 +4,7 @@
   tasks:
   - name: install java6 on ubuntu
     apt:
-     name: openjdk-7-jre
+     name: java-1.8.0-openjdk
      state: present
     when: ansible_os_family== "Debian"
   
