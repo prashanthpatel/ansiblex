@@ -11,7 +11,7 @@
   - name: webserver start on ubuntu
     service:
      name: "{{webserveronubuntu}}"
-     state: present
+     state: restarted
     when: ansible_os_family== "Debian"
 
   - name: webserver install on redhat
@@ -23,5 +23,5 @@
   - name: webserver start on redhat
     service:
      name: "{{webserveronredhat}}"
-     state: present
+     state: restarted
     when: ansible_os_family== "RedHat" 
