@@ -1,11 +1,16 @@
---- 
-- hosts: all
+---
+- hosts: ubuntuhosts
   become: yes
-  tasks:
-   - name: display hostname
-     command: hostname -f
-     register: myresult
+  tasks: 
+  - name: install git
+    apt:
+      namee: git
+    ignore_errors: yes
 
-   - namee: display myresult
-     debug:
-      msg: "{{myresult}}"
+  - name: install tree
+    apt:
+      name: tree
+  
+  - name: install wget
+    apt:
+      name: wget
