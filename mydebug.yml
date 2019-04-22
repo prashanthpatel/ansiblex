@@ -3,7 +3,7 @@
   become: yes
   tasks:
    - name: display hostname
-     command: hostname -f
+     command: ls
      register: myresult
 
    - name: display myresult
