@@ -3,9 +3,8 @@
   become: yes
   tasks:
    - name: display hostname
-     command: 
-      name: hostname -f
-      register: myresult
+     command: hostname -f
+     register: myresult
 
    - name: display myresult
      debug:
