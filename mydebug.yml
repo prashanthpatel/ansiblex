@@ -3,9 +3,10 @@
   become: yes
   tasks:
    - name: display hostname
-     command: hostname -f
-     register: myresult
+     command: 
+      name: hostname -f
+      register: myresult
 
    - name: display myresult
      debug:
-     msg: "{{myresult}}"
+      msg: "{{myresult}}"
