@@ -8,4 +8,4 @@
 
    - name: display myresult
      debug:
-      msg: "{{myresult}"
+      msg: "{{myresult}}"
