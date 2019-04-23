@@ -1,5 +1,5 @@
 ---
 - name: i want to create file on all nodes
   file:
-      path: /home/patel/file2
-      state: touch
+      path: /home/patel/file3
+      state: vi
