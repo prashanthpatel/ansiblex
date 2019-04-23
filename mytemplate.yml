@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install apache2(template) on ubuntu
+    apt:
+     name: apache2
+     state: present
+    
+  - name: start the service
+    service:
+     name: apache2
+     state: started
+
+  - name: writing template from index.j2
+    template:
+     src: index.j2
+     dest: /var/www/html/index.html
