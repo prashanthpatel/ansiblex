@@ -2,6 +2,7 @@
 - hosts: ubuntuhosts
   become: yes
   tasks:
+  - include_tasks: myfile.yml
   - name: install apache2(template) on ubuntu
     apt:
      name: apache2
