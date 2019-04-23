@@ -5,5 +5,5 @@ webserveronredhat: httpd
 javaonubuntu: openjdk-8-jdk
 javaonredhat: java-1.6.0-openjdk
 
-mycomname: Capgemini, Hederabad
+mycomname: Capgemini, Hyderabad
 myname: prashanth patel
