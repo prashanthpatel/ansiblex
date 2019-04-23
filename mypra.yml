@@ -1,0 +1,9 @@
+--- 
+- hosts: all
+  become: yes
+  tasks:
+  - name: uninstall java 8 on ubuntu
+    apt:
+     name: openjdk-8-jdk
+     state: absent
+     
