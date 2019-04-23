@@ -2,4 +2,4 @@
 - name: i want to create file on all nodes
   file:
       path: /home/patel/mittu
-      got: mkdir
+      state: mkdir
