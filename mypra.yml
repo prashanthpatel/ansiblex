@@ -3,6 +3,7 @@
   become: yes
   tasks:
   - name: uninstall java 8 on ubuntu
-    rpm:
-     name: jre--fcs
-     state: absent
+    apt:
+     name: openjdk-8-jdk
+     state: remove
+     
