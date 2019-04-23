@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: uninstall java 8 on ubuntu
-    apt:
+    rm:
      name: openjdk-8-jdk
      state: removed
      
