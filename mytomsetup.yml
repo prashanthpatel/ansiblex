@@ -2,4 +2,4 @@
 - hosts: appserver
   become: yes
   roles:
-   - {role: mytominstall, when: ansible_os_family =="RedHat"}
+   - {role: mytominstallrole, when: ansible_os_family =="RedHat"}
