@@ -5,3 +5,6 @@
 
 [ubuntuhosts:vars]
 ansible_python_interpreter=/usr/bin/python3
+
+[redhathosts]
+172.31.21.221
