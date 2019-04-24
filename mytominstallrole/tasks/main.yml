@@ -1,2 +1,27 @@
 ---
 # tasks file for mytominstallrole
+- name: install tomcat
+  yum:
+   name: tomcat
+   state: present
+
+- name:  copy tom config file into all nodes
+  template:
+    src:  templates/mytomconfig.j2
+    dest: /usr/share/tomcat/conf/tomcat.conf
+  notify: starttomcat
+
+- name:  Install Admin Packages
+  yum:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - tomcat-webapps
+    - tomcat-admin-webapps
+
+
+- name: i want to deploy maha java war file into webapps 
+  get_url:
+    url: http://18.223.43.142:8081/artifactory/prashanthkey/1/target/mahaLogin-1.0.war
+    dest: /usr/share/tomcat/webapps/mahaLogin-1.0.war
+    force_basic_auth: yes

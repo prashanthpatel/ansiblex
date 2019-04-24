@@ -8,3 +8,6 @@ ansible_python_interpreter=/usr/bin/python3
 
 [redhathosts]
 172.31.21.221
+
+[appserver]
+172.31.21.221
