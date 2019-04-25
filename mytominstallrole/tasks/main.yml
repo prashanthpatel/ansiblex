@@ -20,8 +20,3 @@
     - tomcat-admin-webapps
 
 
-- name: i want to deploy maha java war file into webapps 
-  get_url:
-    url: http://18.216.147.38:8081/artifactory/prashanth/1/target/mahaLogin-1.0.war
-    dest: /usr/share/tomcat/webapps/mahaLogin-1.0.war
-    force_basic_auth: yes
