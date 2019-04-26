@@ -1,11 +1,11 @@
 ---
 # handlers file for mytominstallrole
-- name: starttomcat
+- name: start tomcat
   service:
    name: tomcat
    state: started
 
-- name: restarttomcat
+- name: restart tomcat
   service:
    name: tomcat
    state: restarted

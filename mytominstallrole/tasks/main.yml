@@ -9,7 +9,7 @@
   template:
     src:  templates/mytomconfig.j2
     dest: /usr/share/tomcat/conf/tomcat.conf
-  notify: starttomcat
+  notify: start tomcat
 
 - name:  Install Admin Packages
   yum:
@@ -17,7 +17,13 @@
     state: present
   with_items:
     - tomcat-webapps
-    - tomcat-admin-webapps
+    - tomcat-admin-webapps 
+    
+- name: coy tom user file into all nodes
+  template:
+    src: templates/mytomuser.j2
+    dest: /usr/share/tomcat/conf/tomcat-users.xml
+  notify: restart tomcat
 
 
 - name: i want to deploy maha java war file into webapps 
